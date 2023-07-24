@@ -1,0 +1,24 @@
+<form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nomeCliente">Nome do Cliente:  </label>
+      <input type="text" id="nomeCliente" required [(ngModel)]="cliente.nomeCliente" name="nomeCliente">
+    </div>
+  
+    <div>
+      <label for="nomeContato">Nome do Contato:  </label>
+      <input type="text" id="nomeContato" required [(ngModel)]="cliente.nomeContato" name="nomeContato">
+    </div>
+  
+    <div>
+      <label for="cnpj">CNPJ:  </label>
+      <input type="text" id="cnpj" [(ngModel)]="cliente.cnpj" name="cnpj">
+    </div>
+  
+    <div>
+      <label for="dataCadastro">Data de Cadastro:  </label>
+      <input type="date" id="dataCadastro" [(ngModel)]="cliente.dataCadastro" name="dataCadastro">
+    </div>
+  
+    <button type="submit">Cadastrar</button>
+  </form>
+  

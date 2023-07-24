@@ -1,0 +1,26 @@
+<form #avaliacaoForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="mesAno">Mês/Ano:  </label>
+      <input type="month" id="mesAno" required [(ngModel)]="avaliacao.mesAnoReferencia" name="mesAno">
+    </div>
+  
+    <div>
+      <label for="cliente">Cliente:  </label>
+      <select id="cliente" [(ngModel)]="avaliacao.clienteId" name="cliente">
+        <option *ngFor="let cliente of clientes" [value]="cliente.id">{{ cliente.nomeCliente }}</option>
+      </select>
+    </div>
+  
+    <div>
+      <label for="nota">Nota:  </label>
+      <input type="number" id="nota" required [(ngModel)]="avaliacao.nota" name="nota">
+    </div>
+  
+    <div>
+      <label for="motivo">Motivo:  </label>
+      <textarea id="motivo" required [(ngModel)]="avaliacao.motivo" name="motivo"></textarea>
+    </div>
+  
+    <button type="submit">Registrar Avaliação</button>
+  </form>
+  
